@@ -15,11 +15,14 @@ getMovie(api_url);
 
 function show(data){
    // Function to define innerHTML for HTML table
-    let tab;
+    let tab=``;
     // Loop to access all rows 
     for (let r of data) {
-        tab += `<p>${r.title} </p>
-        <img src = "${r.backdrop_path}">`     
+        tab += `<div>
+        <img id="posterImage" src = "https://image.tmdb.org/t/p/w342/${r.poster_path}">
+        <p id="title">${r.title} </p>
+        </div>
+        `     
     }
     // Setting innerHTML as tab variable
     document.getElementById("display-movies").innerHTML = tab;
