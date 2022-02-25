@@ -18,12 +18,22 @@ function show(data){
     let tab=``;
     // Loop to access all rows 
     for (let r of data) {
-        tab += `<div>
-        <img id="posterImage" src = "https://image.tmdb.org/t/p/w342/${r.poster_path}">
+        tab += `<div id="content">
+        <img id="posterImage" src="https://image.tmdb.org/t/p/w342/${r.poster_path}">
         <p id="title">${r.title} </p>
+        <button id="detail">Overview</button>
         </div>
-        `     
+        `
     }
+    
     // Setting innerHTML as tab variable
     document.getElementById("display-movies").innerHTML = tab;
 }
+
+// const input = document.querySelector('input');
+// const modal_container = document.getElementById('modal_container');
+
+// input.addEventListener('input', () => {
+//     modal_container.classList.add('show');
+// });
+
