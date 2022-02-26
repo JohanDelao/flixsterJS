@@ -89,6 +89,7 @@ body {
 }
 /* End of Detail html */
 
+/* Modal */
 .modal-container{
     position: absolute;
     top: 50%;
@@ -116,8 +117,41 @@ body {
     width: 50%;
     text-align: center;
     display: flex;
+    font-family: 'Raleway', sans-serif;
 }
 
 .show .modal{
-    display: flex;
+    display: block;
 }
+/* End of Modal */
+
+/* Inside of Modal */
+
+.modal-header {
+
+}
+
+#modalContent {
+    padding-top: 10vh;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#modalTitle {
+    font-weight: bold;
+}
+
+#modalRating {
+    border-style:solid;
+    background-color: gray;
+    border-color:#287EC7;
+    margin: auto;
+    width: 8%;
+}
+
+#modalDesc {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* End of Inside of Modal */
