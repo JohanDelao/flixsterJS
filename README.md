@@ -10,4 +10,4 @@ Today I completed getting the title and poster from the API Request and displayi
 ## 2/27
 I have completed the functionality of displaying a specific overview for each movie as a modal. This was a challenging and rewarding accomplishment. With the help and advice of some mentors and friends I have got the job done. See it here:
 
-<img src="https://github.com/JohanDelao/flixsterJS/blob/main/flixsterGIF2.gif" width=250><br>
+<img src="https://github.com/JohanDelao/flixsterJS/blob/main/flixsterGIF2.gif"><br>
