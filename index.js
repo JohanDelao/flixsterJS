@@ -33,7 +33,7 @@ function show(data){
     document.getElementById("display-movies").innerHTML = tab;
 }
 // function to add 'show' class to modal container
-const showModal= (id) => {
+const showModal = (id) => {
     // select the modal container
     const modal_container = document.querySelector(".modal-container");
     const modal = document.querySelector(".modal")
@@ -43,24 +43,27 @@ const showModal= (id) => {
     const movie = movies.find(movie => movie.id == id)
     console.log(movie)
     let modalInner = `<div class="modal">
-            <div class="modal-header" style="float: right">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="top:0;right:0">
+            <div class="button" style="float: right">
+                <button type="button" onClick="closeModal()" class="close" data-dismiss="modal" aria-label="Close" style="top:0;right:0">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div id="modalContent">
-                <h3 id="modalTitle">${movie.title}</h3>
-                <p id="modalRating">${movie.vote_average}</p>
-                <p id="modalDesc">${movie.overview}</p>
+            <div id="modalInner">
+                <img id="modalImage" src="https://image.tmdb.org/t/p/w342/${movie.poster_path}">
+                <div id="modalContent" style="display: block">
+                    <h3 id="modalTitle">${movie.title}</h3>
+                    <p id="modalDate">${movie.release_date}</p>
+                    <p id="modalRating">${movie.vote_average}</p>
+                    <p id="modalDesc">${movie.overview}</p>
+                </div>
             </div>
         </div>
     `
     modal_container.innerHTML = modalInner;
 };
-
-//Steps
-
-// Add elements into modal to display movie info
-// Add a header to contain title and close button, does opposite of line 42 classList.remove(show)
-// Make it so when button overview is pressed, backdrop path image is set to background of modal
+ 
+const closeModal = () => {
+    const modal_container = document.querySelector(".modal-container");
+    modal_container.classList.remove('show');
+}
 

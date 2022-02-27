@@ -34,24 +34,20 @@ body {
 
 #content {
     margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
 }
 
 #title{
-    margin-top: 10px;
+    margin: 5px 0px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     width: 250px;
-    margin-bottom: 10px;
 }
 #posterImage {
     border-radius: 7px;
     height: 350px;
 }
-
-#posterImage:hover {
-    border: 5px solid rgb(119, 119, 119);
-}
-
 #detail {
     width: 40%;
 }
@@ -95,8 +91,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 50vh;
-    width: 50vw;
+    height: 42vh;
+    width: 40vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,6 +105,7 @@ body {
 }
 
 .modal {
+    position: absolute;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -128,13 +125,14 @@ body {
 /* Inside of Modal */
 
 .modal-header {
-
+    border-bottom: none;
 }
 
-#modalContent {
-    padding-top: 10vh;
+#modalInner {
     margin: 0 auto;
-    width: 80%;
+    width: 60%;
+    display: flex;
+    padding-top: 6vh;
 }
 
 #modalTitle {
@@ -144,14 +142,26 @@ body {
 #modalRating {
     border-style:solid;
     background-color: gray;
-    border-color:#287EC7;
+    border-color: transparent;
     margin: auto;
-    width: 8%;
+    width: 14%;
+    margin-bottom: .5rem;
+    color: white;
 }
 
 #modalDesc {
     text-align: justify;
     text-justify: inter-word;
+}
+
+#modalDate {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+#modalImage {
+    height: 350px;
+    padding-right: 50px;
 }
 
 /* End of Inside of Modal */
